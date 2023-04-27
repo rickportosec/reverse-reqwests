@@ -1,0 +1,17 @@
+[package]
+name = "bad-reqwest"
+version = "0.1.0"
+edition = "2021"
+authors = ["<rickporto.sec@gmail.com>"]
+
+[dependencies]
+reqwest = {version = "0.11", features = ["blocking"]}
+tokio = {version = "1.12.0", features = ["full"]}
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1 
+panic = "abort"
+incremental = false
+debug = false
