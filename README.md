@@ -35,6 +35,7 @@ cargo b --release
 ```
 
 path do binário `target/release`
+
 ____________________________________________________________________________________________________
 ### `server`
 ```
@@ -42,6 +43,9 @@ python3 svflask.py
 ```
 
 ____________________________________________________________________________________________________
+
+O ataque acontece com a interação do cliente com o arquivo.
+
 `VirusTotal !! ⚠️ 2/70` `->`
 
 https://www.virustotal.com/gui/file/7c907e0079548e4adcc4d65480dcf1d4fecae18deb4fef96295a79ac127300df?nocache=1
