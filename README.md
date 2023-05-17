@@ -24,8 +24,9 @@ chmod +x config.sh
       --unix        *    (default)
       --addr        *    (local, ngrok)
       --proto       *    (http, https)
+      --port        *    (default: 5000)
          
-Exemplo: ./config.sh --windows --addr xxxx-xxxx-xxxx-xxxx.ngrok-free.app --proto https 
+Exemplo: ./config.sh --windows --addr xxxx-xxxx-xxxx-xxxx.ngrok-free.app --proto https --port 443
 ```
 ____________________________________________________________________________________________________
 ### `build`
