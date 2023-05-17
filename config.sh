@@ -16,13 +16,7 @@ case $setup in
     ;;
     --addr)
     new_addr="$2"
-    sed -i "s/addr=\".*\"/addr=\"$new_addr\"/" svflask.py
     sed -i "s/static IP_ADDR: \&str = \".*\"/static IP_ADDR: \&str = \"$new_addr\"/" src/main.rs
-    ;;
-    --port)
-    new_port="$2"
-    sed -i "s/port=.*/port=$new_port/" svflask.py
-    sed -i "s/static PORT: u32 = .*/static PORT: u32 = $new_port;/" src/main.rs
     ;;
     --proto)
     new_proto="$2"
