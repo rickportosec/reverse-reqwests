@@ -22,10 +22,10 @@ chmod +x config.sh
 ```             
       --windows        
       --unix        *    (default)
-      --addr         
-      --port         
+      --addr        *    (local, ngrok)
+      --proto       *    (http, https)
          
-Exemplo: ./config.sh --windows --addr 192.168.1.100 --port 8080
+Exemplo: ./config.sh --windows --addr xxxx-xxxx-xxxx-xxxx.ngrok-free.app
 ```
 ____________________________________________________________________________________________________
 ### `build`
