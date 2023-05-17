@@ -24,10 +24,12 @@ case $setup in
     sed -i "s/port=.*/port=$new_port/" svflask.py
     sed -i "s/static PORT: u32 = .*/static PORT: u32 = $new_port;/" src/main.rs
     ;;
-    *)
-    echo -e " --unix\n --windows\n --addr\n --port"
+    --proto)
+    new_proto="$2"
+    sed -i "s/static PROTO: \&str = \".*\"/static PROTO: \&str = \"$new_proto\"/" src/main.rs
     ;;
-
+    *)
+    ;;
 
 esac
 shift
