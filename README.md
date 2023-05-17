@@ -36,7 +36,7 @@ cargo b --release
 path do binário `target/release`
 
 ____________________________________________________________________________________________________
-### `server`
+### `servers`
 ```
 python3 svflask.py
 python3 svflask-ngrok.py
