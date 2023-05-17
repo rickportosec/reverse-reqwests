@@ -31,7 +31,7 @@ fn req(data: &str){
 }
 fn exec(cmd: &str) -> String{
     let args: Vec<&str> = cmd.split_whitespace().collect();
-    if args.len() < 2{
+    if args.len() < 1{
         return format!("{}", "");
     }
     match args[0]{
