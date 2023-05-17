@@ -12,6 +12,7 @@ ________________________________________________________________________________
 * `cargo` https://www.rust-lang.org/
 * `git`  (clone esse repositorio)
 * `pip` https://www.python.org/
+* `ngrok` https://ngrok.com/ (`sudo apt-get install libssl-dev`)
 ```
 pip3 install -r requeriments.txt
 ```
@@ -41,7 +42,6 @@ ________________________________________________________________________________
 ```
 python3 svflask.py
 ```
-
 ____________________________________________________________________________________________________
 
 O ataque acontece com a interação do cliente com o arquivo.
