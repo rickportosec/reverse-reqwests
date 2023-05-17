@@ -11,11 +11,9 @@ ________________________________________________________________________________
 
 * `cargo` https://www.rust-lang.org/
 * `git`  (clone esse repositorio)
-* `pip` https://www.python.org/
+* `pip` https://www.python.org/ (`pip3 install -r requeriments.txt`)
 * `ngrok` https://ngrok.com/ (`sudo apt-get install libssl-dev`)
-```
-pip3 install -r requeriments.txt
-```
+
 ____________________________________________________________________________________________________
 ### `config.sh`
 ```
