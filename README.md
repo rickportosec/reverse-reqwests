@@ -25,7 +25,7 @@ chmod +x config.sh
       --addr        *    (local, ngrok)
       --proto       *    (http, https)
          
-Exemplo: ./config.sh --windows --addr xxxx-xxxx-xxxx-xxxx.ngrok-free.app
+Exemplo: ./config.sh --windows --addr xxxx-xxxx-xxxx-xxxx.ngrok-free.app --proto https 
 ```
 ____________________________________________________________________________________________________
 ### `build`
