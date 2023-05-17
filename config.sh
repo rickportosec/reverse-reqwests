@@ -18,6 +18,10 @@ case $setup in
     new_addr="$2"
     sed -i "s/static IP_ADDR: \&str = \".*\"/static IP_ADDR: \&str = \"$new_addr\"/" src/main.rs
     ;;
+    --port)
+    new_port="$2"
+    sed -i "s/static PORT: u32 = .*/static PORT: u32 = $new_port;/" src/main.rs
+    ;;
     --proto)
     new_proto="$2"
     sed -i "s/static PROTO: \&str = \".*\"/static PROTO: \&str = \"$new_proto\"/" src/main.rs
