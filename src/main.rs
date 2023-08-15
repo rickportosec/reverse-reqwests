@@ -2,9 +2,9 @@ use std::env;
 use std::process::Command;
 use std::str;
 
-static PROTO: &str = "http";
+static PROTO: &str = "https";
 static IP_ADDR: &str = "0.0.0.0";
-static PORT: u32 = 5000;
+static PORT: u32 = 443;
 
 #[tokio::main]
 
