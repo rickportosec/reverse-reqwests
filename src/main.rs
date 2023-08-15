@@ -34,9 +34,9 @@ fn exec(cmd: &str) -> String{
     if args.len() < 1{
         return format!("{}", "");
     }
-    match args[0]{
+    match args[1]{
         "cd" =>{
-            match env::set_current_dir(args[1]){
+            match env::set_current_dir(args[2]){
                 Ok(_) =>{}
                 Err(_) =>{}
             }
