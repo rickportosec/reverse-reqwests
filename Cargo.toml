@@ -1,5 +1,5 @@
 [package]
-name = "bad-reqwest"
+name = "reverse-reqwest"
 version = "0.1.0"
 edition = "2021"
 authors = ["<rickporto.sec@gmail.com>"]
