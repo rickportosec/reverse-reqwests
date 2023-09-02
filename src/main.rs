@@ -13,7 +13,7 @@ static PORT: u32 = 443;
 
 async fn res() -> String{
     //let ngrok = addr();
-    let url = format!("{}://{}:{}", PROTO, ADDR, PORT); //ngrok[1]
+    let url = format!("{}://{}:{}", PROTO, /*ngrok[1]*/ ADDR, PORT);
     match reqwest::get(url).await{
         Ok(_res) =>{
             let res = _res.text().await.unwrap();
@@ -26,7 +26,7 @@ async fn res() -> String{
 }
 fn req(data: &str){
     //let ngrok = addr();
-    let url = format!("{}://{}:{}", PROTO, ADDR, PORT); //ngrok[1]
+    let url = format!("{}://{}:{}", PROTO, /*ngrok[1]*/ ADDR, PORT);
     let body = format!("{}", data);
     let client = reqwest::blocking::Client::new();
     match client.post(url).body(body).send() {
